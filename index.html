@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Ritmo | GitHub Pages</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Calculadora de Ritmo</h1>
+    <p class="subtitle">Prueba de despliegue en GitHub Pages</p>
+
+    <form id="pace-form">
+      <div class="field">
+        <label for="distance">Distancia (km)</label>
+        <input type="number" id="distance" step="0.1" min="0.1" value="10" required />
+      </div>
+
+      <div class="field">
+        <label for="hours">Horas</label>
+        <input type="number" id="hours" min="0" max="99" value="0" required />
+      </div>
+
+      <div class="field">
+        <label for="minutes">Minutos</label>
+        <input type="number" id="minutes" min="0" max="59" value="53" required />
+      </div>
+
+      <div class="field">
+        <label for="seconds">Segundos</label>
+        <input type="number" id="seconds" min="0" max="59" value="0" required />
+      </div>
+
+      <button type="submit">Calcular ritmo</button>
+    </form>
+
+    <section id="result" class="result" aria-live="polite">
+      <span>Tu ritmo promedio:</span>
+      <strong id="pace-output">--:-- min/km</strong>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
